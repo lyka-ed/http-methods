@@ -1,4 +1,5 @@
 const http = require("http");
+
 const PORT = 9000;
 
 const behaviour = (req, res) => {
@@ -7,8 +8,12 @@ const behaviour = (req, res) => {
 
   // urL GET BOOKS
   if (req.method === "GET" && req.url === "/books") {
-    res.write(`Welcome to the library in GET/books`);
-    // console.log(`Half of a yellow sun`);
+    res.write(
+      JSON.stringify([
+        { title: "Half of Life", page: 33 },
+        { title: "Linving in Lagos", page: 316 },
+      ])
+    );
     res.end();
   }
 
