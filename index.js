@@ -11,7 +11,7 @@ const behaviour = (req, res) => {
     res.write(
       JSON.stringify([
         { title: "Half of Life", page: 33 },
-        { title: "Linving in Lagos", page: 316 },
+        { title: "Living in Lagos", page: 316 },
       ])
     );
     res.end();
